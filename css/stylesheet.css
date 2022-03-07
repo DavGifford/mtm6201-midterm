@@ -85,10 +85,12 @@ nav li{
     /* 
     Index
     */
-    #home-page-stuff{
+    .home-page-stuff{
     display: flex;
     flex-direction: column;
     padding: 10px;
+    justify-content: center;
+
 }
 
 #Text-B-I-1{
