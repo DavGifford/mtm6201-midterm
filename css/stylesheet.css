@@ -88,37 +88,46 @@ nav li{
     .home-page-stuff{
     display: flex;
     flex-direction: column;
+    flex-wrap: none;
     padding: 10px;
+    align-content: center;
     justify-content: center;
 
 }
 
 #Text-B-I-1{
    order: 1;
+   display: block;
 }
 
 #photo-1{
     order: 2;
+    display: block;
 }
 
 #Text-B-I-2{
     order: 3;
+    display: block;
 }
 
 #photo-2{
     order: 4;
+    display: block;
 }
 
 #Text-B-I-3{
    order: 5;
+   display: block;
 }
 
 #photo-3{
    order: 6;
+   display: block;
 }
 
 #Text-B-I-4{
     order: 7;
+    display: block;
 }
     /* 
     CakePops
@@ -127,48 +136,6 @@ nav li{
      /* 
      About
       */
-/* 
-Tablet
-*/
-@media screen and (min-width: 480px) and (max-width: 768px) {
-    nav li{
-		padding: 15px;
-		display: inline-block;
-	}
-	li, #smlogo{
-		float: left;
-	}
-	nav li:hover{
-		background-color: #C68D00;
-	}
-	nav a:hover{
-		color: #000;
-	}
-	#searchbar{
-		width: 200px;
-		height:calc(1.1em + 10px);
-	}
-	#smlogo{
-		background-color: black;
-	}
-	#smlogo, nav li, #seachbar{
-		display: block;
-		background-color: black;
-	}
-    /* 
-    Index
-    */
-
-    /* 
-    CakePops
-     */
-
-     /* 
-     About
-      */
-
-      
-}
 /* 
 Desktop
 */
