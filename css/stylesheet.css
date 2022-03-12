@@ -50,12 +50,17 @@ table {
 	border-spacing: 0;
 }
 /* 
+ANIMATION
+*/
+/* 
 General Code
  */
 
  main{
      background-image: url(images/white-marble-texture.jpg);
      background-repeat: repeat;
+     max-width: 1200px;
+     margin: 0 auto;
  }
  footer{
      font-size: 1.2rem;
@@ -174,16 +179,32 @@ nav li{
 */
 
 .products{
+    padding: 10px;
+}
+.product{
     display: flex;
     flex-direction: column;
-    flex-wrap: none;
-    padding: 10px;
+    margin: 20px 10px;
     align-content: center;
     justify-content: center;
 }
-.product{
-    display: block;
-    margin: 20px 10px;
+
+.product h4{
+    order: 1;
+    margin-top: 5px;
+}
+
+.product picture{
+    order: 2;
+}
+
+.product p{
+    order: 3;
+    margin: 10px;
+}
+
+.product button{
+    order: 4;
 }
 
 #photo-4{
@@ -200,9 +221,60 @@ nav li{
     margin: auto;
     padding: 30px 0px;
 }
+
+#product-1{
+    border: solid cyan 3px;
+}
+
+#product-2{
+    border: solid cyan 3px;
+}
+
+#product-2 p{
+    order: 4;
+}
+
+#product-3{
+    border: solid cyan 3px;
+}
+#product-3 picture{
+    order: 3;
+}
+
+#product-4{
+    border: solid cyan 3px;
+}
+
+#product-5{
+    border: solid cyan 3px;
+}
+
+#product-6{
+    border: solid cyan 3px;
+}
+
+button{
+    background-color: #444;
+    border: #000;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 10px;
+}
 /* 
      About
   */
+
+
+ .about-p, iframe{
+      width: calc(100vw - 30px);
+      margin: 15px;
+  }
 /* 
 Desktop
 */
