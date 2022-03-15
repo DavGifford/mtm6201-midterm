@@ -52,6 +52,34 @@ table {
 /* 
 ANIMATION
 */
+@keyframes gay {
+    0%{
+        color: #4B2882;
+    }
+    16%{
+        color: #2E5793;
+    }
+    32%{
+        color: #177245;
+    }
+    48%{
+        color: #C4A705;
+    }
+    71%{
+        color: #C96112;
+    }
+    84%{
+        color: #C1301C;
+    }
+    96%{
+        color: #4B2882;
+    }
+    100%{
+        color: #4B2882;
+    }
+}
+
+
 /* 
 General Code
  */
@@ -68,13 +96,16 @@ General Code
      background-color: #333;
  }
  /* HEADER */
- #logo{
+ .logo{
     width: 100%;
 }
 header{
     display: block;
     width: 100%
 }
+/* 
+Fonts and text
+*/
 h1{
     font-size: 2.5rem;
     font-weight: 800;
@@ -112,12 +143,20 @@ nav a{
 	color: #000;
 	font-size: 1.1em;
     text-align: center;
+    transition: 0.3s;
 }
 nav li{
 	display: block;
 	padding:15px 40% 15px 40% ;
 }
-
+a:hover{
+    transform: scale(1.2);
+    background-color: cyan;
+    color: black;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    font-weight: bold;
+}
  /* 
     Index
 */
@@ -174,6 +213,13 @@ nav li{
     display: block;
     margin: 20px 10px;
 }
+
+#photo-4{
+    order: 8;
+    display: block;
+    margin: auto;
+    padding: 30px 0px;
+ }
 /* 
     CakePops
 */
@@ -208,7 +254,6 @@ nav li{
 }
 
 #photo-4{
-    margin: auto;
     padding: 30px 0px;
 }
 
@@ -265,31 +310,169 @@ button{
     width: 200px;
     margin: auto;
     margin-bottom: 10px;
+    transition: 0.3s;
+}
+button:hover{
+    transform: scale(1.2);
+    background-color: cyan;
+    color: black;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    font-weight: bold;
 }
 /* 
      About
   */
-
-
+  .about-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
  .about-p, iframe{
       width: calc(100vw - 30px);
       margin: 15px;
+  }
+
+  #header-about{
+      animation-name: gay;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
   }
 /* 
 Desktop
 */
 @media screen and (min-width: 769px) {
+    /* 
+    Nav
+     */
+     header{
+         display: flex;
+         flex-direction: row;
+     }
+     .logo{
+         width: 300px;
+
+     }
+     ul{
+         margin: 0;
+         padding: 0;
+         display: flex;
+         flex-direction: row;
+         padding-left: 50%;
+     }
+
+     nav li, .logo{
+         padding: 10px;
+     }
+
+     li a {
+         display: block;
+         padding: 10px 30px;
+         width: 100px;
+     }
         /* 
     Index
     */
+    .home-page-stuff { 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 12px 12px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "photo-1 Text-B-I-1"
+          "photo-2 Text-B-I-2"
+          "photo-3 Text-B-I-3"
+          "photo-4 Text-B-1-4";
+      }
+      
+      #photo-1 {
+           grid-area: photo-1;
+           order: 1;
+         }
+      
+      #photo-2 { 
+          grid-area: photo-2;
+          order: 3; 
+        }
+      
+      #photo-3 { 
+        grid-area: photo-3;
+        order: 5;
+     }
 
+      #photo-4  { 
+     grid-area: photo-4;
+     order: 7;
+        
+     }
+      
+      #Text-B-I-1 {
+           grid-area: Text-B-I-1;
+           order: 2;
+         }
+      
+      #Text-B-I-2 { 
+          grid-area: Text-B-I-2;
+          order: 4;
+         }
+      
+      #Text-B-I-3 {
+           grid-area: Text-B-I-3;
+           order: 6;
+         }
+      
+      #Text-B-1-4 { 
+          grid-area: Text-B-1-4;
+          order: 8;
+         }
+      
     /* 
     CakePops
      */
+     .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px 20px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "product-1 product-2"
+          "product-3 product-4"
+          "product-5 product-6";
+     }
+     #product-1{
+         grid-area: product-1;
+     }
 
+     #product-2{
+        grid-area: product-2;
+    }
+
+    #product-3{
+        grid-area: product-3;
+    }
+
+    #product-4{
+        grid-area: product-4;
+    }
+
+    #product-5{
+        grid-area: product-5;
+    }
+
+    #product-6{
+        grid-area: product-6;
+    }
      /* 
      About
       */
-
+      .about-p, iframe{
+        justify-content: center;
+        align-items: center;
+        width: 770px ;
+        margin: 15px;
+    }
       
 }
